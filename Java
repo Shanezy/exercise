@@ -1,0 +1,79 @@
+Highcharts.chart('container', {
+
+    title: {
+        text: 'Number of People Experiencing Homelessness, by Type, 2011-2018'
+    },
+
+    subtitle: {
+        text: 'Source: endhomelessness.org'
+    },
+
+    yAxis: {
+        title: {
+            text: 'Number of Homeless'
+        }
+    },
+
+    xAxis: {
+        accessibility: {
+            rangeDescription: 'Range: 2011 to 2018'
+        }
+    },
+
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    plotOptions: {
+        series: {
+            label: {
+                connectorAllowed: false
+            },
+            pointStart: 2011
+        }
+    },
+
+    series: [{
+        name: 'Total',
+        data: [63445, 69566, 77430, 80590, 88250, 86352, 89503, 91897]
+    }, {
+        name: 'Sheltered',
+        data: [59778, 65482, 73273, 76487, 84228, 82761, 84948, 87603]
+    }, {
+        name: 'Unsheltered',
+        data: [3667, 4157, 4103, 4022, 3591, 4555, 4294]
+    }, {
+        name: 'Individuals',
+        data: [27338, 30133, 31235, 32643, 36135, 35315, 37390 ,39827]
+    }, {
+        name: 'People in Families',
+        data: [36107, 39433, 46195, 47947, 52115, 51037, 52113, 52070]
+    }, {
+        name: 'Chronically Homeless Individuals',
+        data: [3840, 4324, 4045, 4350, 4327, 4112, 5087, 7195]
+    }, {
+        name: 'Veterans',
+        data: [5765, 4961, 4659, 2542, 2399, 1248, 1244, 1224]
+    }, {
+        name: 'Unaccompanied Children and Youth',
+        data: [null, null, null, null, null, 2889, 2829, 2941]
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 700
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+
+});
